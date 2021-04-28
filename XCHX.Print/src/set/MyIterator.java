@@ -19,7 +19,37 @@ public class MyIterator {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Fun03();
+		Fun06();
+	}
+
+	/**
+	 * 使用Foreach遍历List
+	 */
+	private static void Fun06() {
+		ArrayList<String> list = new ArrayList<String>();
+		for (int i = 0; i < 5; i++) {
+			list.add("b" + i);
+		}
+		
+		System.out.println(list);
+		for (String string : list) {
+			System.out.print(string + "，");
+		}
+	}
+	
+	/**
+	 * 使用Foreach遍历Set
+	 */
+	private static void Fun05() {
+		Set<String> set = new HashSet<String>();
+		for(int i = 0;i < 5;i++) {
+			set.add("a" + i);
+		}
+		
+		System.out.println(set);
+	 	for(String temp: set) {
+	 		System.out.print(temp + "，");
+	 	}
 	}
 	
 	/**
