@@ -15,15 +15,15 @@ public class MyCollections {
 			list.add("a" + i);
 		}
 		
-		System.out.println("Ô­Ê¼Êı×é£º" + list);
-		Collections.shuffle(list);		// Ëæ»úÅÅĞò
-		System.out.println("Ëæ»úÅÅĞò£º" + list);
-		Collections.reverse(list);		// ·´ÏòÅÅĞò
-		System.out.println("·´ÏòÅÅĞò£º" + list);
-		Collections.sort(list);  	// ÅÅĞò
-		System.out.println("ÅÅĞò£º" + list);
+		System.out.println("åŸå§‹æ•°ç»„ï¼š" + list);
+		Collections.shuffle(list);		// éšæœºæ’åº
+		System.out.println("éšæœºæ’åºï¼š" + list);
+		Collections.reverse(list);		// åå‘æ’åº
+		System.out.println("åå‘æ’åºï¼š" + list);
+		Collections.sort(list);  	// æ’åº
+		System.out.println("æ’åºï¼š" + list);
 		int index = Collections.binarySearch(list, "a2");
-		System.out.println("a2ÔªËØµÄÏÂ±ê£º" + index);
+		System.out.println("a2å…ƒç´ çš„ä¸‹æ ‡ï¼š" + index);
 		Collections.fill(list, "Hello World");
 		System.out.println(list);
 	}

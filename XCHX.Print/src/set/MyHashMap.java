@@ -1,12 +1,12 @@
 /*********************************************
-* ÎÄ ¼ş Ãû:MyHashMap.cs
-* ¹¦ÄÜÃèÊö£º¼¯ºÏ°üÖĞHashMapµÄ²âÊÔÀà
-* ´´ ½¨ ÈË: AlexanderArima
-* ÈÕ    ÆÚ: 2021-4-22
-* ĞŞ ¸Ä ÈË:
-* ĞŞ¸ÄÈÕÆÚ:
-* ĞŞ¸ÄÃèÊö:
-* °æ    ±¾: 1.0.0
+* æ–‡ ä»¶ å:MyHashMap.cs
+* åŠŸèƒ½æè¿°ï¼šé›†åˆåŒ…ä¸­HashMapçš„æµ‹è¯•ç±»
+* åˆ› å»º äºº: AlexanderArima
+* æ—¥    æœŸ: 2021-4-22
+* ä¿® æ”¹ äºº:
+* ä¿®æ”¹æ—¥æœŸ:
+* ä¿®æ”¹æè¿°:
+* ç‰ˆ    æœ¬: 1.0.0
  * *******************************************/
 package set;
 
@@ -24,81 +24,81 @@ public class MyHashMap {
 	}
 	
 	/***
-	 * HashMapµÄ³£ÓÃ·½·¨Demo
+	 * HashMapçš„å¸¸ç”¨æ–¹æ³•Demo
 	 */
 	public static void Fun01() {
 		// TODO Auto-generated method stub
 		HashMap<String, String> map = new HashMap<String, String>();
-		map.put("1", "ÀèÃ÷");
-		map.put("2", "ÕÅÈı");
-		map.put("3", "ÍõÎå");
-		map.put("1", "ÕÔÁù");
-		map.put("2", "ºÎÆß");
+		map.put("1", "é»æ˜");
+		map.put("2", "å¼ ä¸‰");
+		map.put("3", "ç‹äº”");
+		map.put("1", "èµµå…­");
+		map.put("2", "ä½•ä¸ƒ");
 		System.out.println(map);
 		System.out.println(map.size());
 		boolean flag1 = map.containsKey("1");
-		System.out.println(String.format("ÊÇ·ñ°üº¬¼üÎª1µÄ×Öµä£º%s",(flag1 == true ? "°üº¬": "²»°üº¬")));
-		boolean flag2 = map.containsValue("ÁõËÄ");
-		System.out.println(String.format("ÊÇ·ñ°üº¬ÖµÎªÁõËÄµÄ×Öµä£º%s",(flag2 == true ? "°üº¬": "²»°üº¬")));
-		map.put("3", "ÁõËÄ");
-		boolean flag3 = map.containsValue("ÁõËÄ");
-		System.out.println(String.format("ÊÇ·ñ°üº¬ÖµÎªÁõËÄµÄ×Öµä£º%s",(flag3 == true ? "°üº¬": "²»°üº¬")));
+		System.out.println(String.format("æ˜¯å¦åŒ…å«é”®ä¸º1çš„å­—å…¸ï¼š%s",(flag1 == true ? "åŒ…å«": "ä¸åŒ…å«")));
+		boolean flag2 = map.containsValue("åˆ˜å››");
+		System.out.println(String.format("æ˜¯å¦åŒ…å«å€¼ä¸ºåˆ˜å››çš„å­—å…¸ï¼š%s",(flag2 == true ? "åŒ…å«": "ä¸åŒ…å«")));
+		map.put("3", "åˆ˜å››");
+		boolean flag3 = map.containsValue("åˆ˜å››");
+		System.out.println(String.format("æ˜¯å¦åŒ…å«å€¼ä¸ºåˆ˜å››çš„å­—å…¸ï¼š%s",(flag3 == true ? "åŒ…å«": "ä¸åŒ…å«")));
 	
-		// HashMapÔÊĞíkeyÎªnull
+		// HashMapå…è®¸keyä¸ºnull
 		map.put(null, "1");
 	}
 	
 	/**
-	 * HashtableµÄ³£ÓÃ·½·¨Àı×Ó
+	 * Hashtableçš„å¸¸ç”¨æ–¹æ³•ä¾‹å­
 	 */
 	public static void Fun02() {
 		Hashtable<String, String> table = new Hashtable<String, String>();
-		table.put("1", "ÀèÃ÷");
-		table.put("2", "ÕÅÈı");
-		table.put("3", "ÍõÎå");
-		table.put("1", "ÕÔÁù");
-		table.put("2", "ºÎÆß");
+		table.put("1", "é»æ˜");
+		table.put("2", "å¼ ä¸‰");
+		table.put("3", "ç‹äº”");
+		table.put("1", "èµµå…­");
+		table.put("2", "ä½•ä¸ƒ");
 		System.out.println(table);
 		System.out.println(table.size());
 		boolean flag1 = table.containsKey("1");
-		System.out.println(String.format("ÊÇ·ñ°üº¬¼üÎª1µÄ×Öµä£º%s",(flag1 == true ? "°üº¬": "²»°üº¬")));
-		boolean flag2 = table.containsValue("ÁõËÄ");
-		System.out.println(String.format("ÊÇ·ñ°üº¬ÖµÎªÁõËÄµÄ×Öµä£º%s",(flag2 == true ? "°üº¬": "²»°üº¬")));
-		table.put("3", "ÁõËÄ");
-		boolean flag3 = table.containsValue("ÁõËÄ");
-		System.out.println(String.format("ÊÇ·ñ°üº¬ÖµÎªÁõËÄµÄ×Öµä£º%s",(flag3 == true ? "°üº¬": "²»°üº¬")));
+		System.out.println(String.format("æ˜¯å¦åŒ…å«é”®ä¸º1çš„å­—å…¸ï¼š%s",(flag1 == true ? "åŒ…å«": "ä¸åŒ…å«")));
+		boolean flag2 = table.containsValue("åˆ˜å››");
+		System.out.println(String.format("æ˜¯å¦åŒ…å«å€¼ä¸ºåˆ˜å››çš„å­—å…¸ï¼š%s",(flag2 == true ? "åŒ…å«": "ä¸åŒ…å«")));
+		table.put("3", "åˆ˜å››");
+		boolean flag3 = table.containsValue("åˆ˜å››");
+		System.out.println(String.format("æ˜¯å¦åŒ…å«å€¼ä¸ºåˆ˜å››çš„å­—å…¸ï¼š%s",(flag3 == true ? "åŒ…å«": "ä¸åŒ…å«")));
 		
-		// HashTable²»ÔÊĞíkeyÎªnull£¬ÕâÀï»áÅ×³öÒì³£
+		// HashTableä¸å…è®¸keyä¸ºnullï¼Œè¿™é‡Œä¼šæŠ›å‡ºå¼‚å¸¸
 		table.put(null, "1");
 	}
 	
 	/**
-	 * TreeMapµÄ³£ÓÃ·½·¨Àı×Ó
+	 * TreeMapçš„å¸¸ç”¨æ–¹æ³•ä¾‹å­
 	 */
 	public static void Fun03() {
 		TreeMap<String, String> map = new TreeMap<String, String>();
-		map.put("1", "ÀèÃ÷");
-		map.put("2", "ÕÅÈı");
-		map.put("3", "ÍõÎå");
-		map.put("1", "ÕÔÁù");
-		map.put("2", "ºÎÆß");
+		map.put("1", "é»æ˜");
+		map.put("2", "å¼ ä¸‰");
+		map.put("3", "ç‹äº”");
+		map.put("1", "èµµå…­");
+		map.put("2", "ä½•ä¸ƒ");
 		
 		System.out.println(map);
 		System.out.println(map.size());
 		boolean flag1 = map.containsKey("1");
-		System.out.println(String.format("ÊÇ·ñ°üº¬¼üÎª1µÄ×Öµä£º%s",(flag1 == true ? "°üº¬": "²»°üº¬")));
-		boolean flag2 = map.containsValue("ÁõËÄ");
-		System.out.println(String.format("ÊÇ·ñ°üº¬ÖµÎªÁõËÄµÄ×Öµä£º%s",(flag2 == true ? "°üº¬": "²»°üº¬")));
-		map.put("3", "ÁõËÄ");
-		boolean flag3 = map.containsValue("ÁõËÄ");
-		System.out.println(String.format("ÊÇ·ñ°üº¬ÖµÎªÁõËÄµÄ×Öµä£º%s",(flag3 == true ? "°üº¬": "²»°üº¬")));
+		System.out.println(String.format("æ˜¯å¦åŒ…å«é”®ä¸º1çš„å­—å…¸ï¼š%s",(flag1 == true ? "åŒ…å«": "ä¸åŒ…å«")));
+		boolean flag2 = map.containsValue("åˆ˜å››");
+		System.out.println(String.format("æ˜¯å¦åŒ…å«å€¼ä¸ºåˆ˜å››çš„å­—å…¸ï¼š%s",(flag2 == true ? "åŒ…å«": "ä¸åŒ…å«")));
+		map.put("3", "åˆ˜å››");
+		boolean flag3 = map.containsValue("åˆ˜å››");
+		System.out.println(String.format("æ˜¯å¦åŒ…å«å€¼ä¸ºåˆ˜å››çš„å­—å…¸ï¼š%s",(flag3 == true ? "åŒ…å«": "ä¸åŒ…å«")));
 	
-		// HashMapÔÊĞíkeyÎªnull
+		// HashMapå…è®¸keyä¸ºnull
 		// map.put(null, "1");
 	}
 
 	/**
-	 * HashSetµÄ³£ÓÃ·½·¨µÄÀı×Ó
+	 * HashSetçš„å¸¸ç”¨æ–¹æ³•çš„ä¾‹å­
 	 */
 	public static void Fun04() {
 		Set<String> set = new HashSet<String>();
@@ -106,11 +106,11 @@ public class MyHashMap {
 		set.add("LiSi");
 		set.add("WangWu");
 		System.out.println(set);
-		set.add("LiSi");	// ÓÉÓÚSetÖĞµÄÔªËØÊÇ²»¿ÉÖØ¸´µÄ£¬ËùÒÔ²»»á´òÓ¡Á½¸öLiSi
+		set.add("LiSi");	// ç”±äºSetä¸­çš„å…ƒç´ æ˜¯ä¸å¯é‡å¤çš„ï¼Œæ‰€ä»¥ä¸ä¼šæ‰“å°ä¸¤ä¸ªLiSi
 		System.out.println(set);
 		set.add(null);
 		System.out.println(set);
-		set.add(null);		// nullÖµÒ²ÊÇÒ»ÑùµÄ£¬²»»áÖØ¸´
+		set.add(null);		// nullå€¼ä¹Ÿæ˜¯ä¸€æ ·çš„ï¼Œä¸ä¼šé‡å¤
 		System.out.println(set);
 	}
 }

@@ -1,12 +1,12 @@
 /*********************************************
-* ÎÄ ¼ş Ãû:MyIterator.cs
-* ¹¦ÄÜÃèÊö£º¼¯ºÏÀàÖĞÊ¹ÓÃµü´úÆ÷Iterator±éÀúÔªËØ
-* ´´ ½¨ ÈË: AlexanderArima
-* ÈÕ    ÆÚ: 2021-4-25
-* ĞŞ ¸Ä ÈË:
-* ĞŞ¸ÄÈÕÆÚ:
-* ĞŞ¸ÄÃèÊö:
-* °æ    ±¾: 1.0.0
+* æ–‡ ä»¶ å:MyIterator.cs
+* åŠŸèƒ½æè¿°ï¼šé›†åˆç±»ä¸­ä½¿ç”¨è¿­ä»£å™¨Iteratoréå†å…ƒç´ 
+* åˆ› å»º äºº: AlexanderArima
+* æ—¥    æœŸ: 2021-4-25
+* ä¿® æ”¹ äºº:
+* ä¿®æ”¹æ—¥æœŸ:
+* ä¿®æ”¹æè¿°:
+* ç‰ˆ    æœ¬: 1.0.0
  * *******************************************/
 package set;
 
@@ -23,7 +23,7 @@ public class MyIterator {
 	}
 
 	/**
-	 * Ê¹ÓÃForeach±éÀúList
+	 * ä½¿ç”¨Foreachéå†List
 	 */
 	private static void Fun06() {
 		ArrayList<String> list = new ArrayList<String>();
@@ -33,12 +33,12 @@ public class MyIterator {
 		
 		System.out.println(list);
 		for (String string : list) {
-			System.out.print(string + "£¬");
+			System.out.print(string + "ï¼Œ");
 		}
 	}
 	
 	/**
-	 * Ê¹ÓÃForeach±éÀúSet
+	 * ä½¿ç”¨Foreachéå†Set
 	 */
 	private static void Fun05() {
 		Set<String> set = new HashSet<String>();
@@ -48,46 +48,46 @@ public class MyIterator {
 		
 		System.out.println(set);
 	 	for(String temp: set) {
-	 		System.out.print(temp + "£¬");
+	 		System.out.print(temp + "ï¼Œ");
 	 	}
 	}
 	
 	/**
-	 * Ê¹ÓÃÁíÒ»ÖÖ·½Ê½£¬ÀûÓÃµü´úÆ÷±éÀúHashMap
+	 * ä½¿ç”¨å¦ä¸€ç§æ–¹å¼ï¼Œåˆ©ç”¨è¿­ä»£å™¨éå†HashMap
 	 */
 	private static void Fun04() {
 		HashMap<String, String> map = new HashMap<String, String>();
-		map.put("1", "ÓïÎÄ");
-		map.put("2", "ÊıÑ§");
+		map.put("1", "è¯­æ–‡");
+		map.put("2", "æ•°å­¦");
 		Set<String>keySet =  map.keySet();
 		System.out.println(keySet);
 		Iterator<String> iterator = keySet.iterator();
 		while(iterator.hasNext()) {
 			String keyString = iterator.next();
 			String valueString = map.get(keyString);
-			System.out.println("Key£º" + keyString + "£¬Value£º" + valueString);
+			System.out.println("Keyï¼š" + keyString + "ï¼ŒValueï¼š" + valueString);
 		}
 	}
 	
 	/**
-	 * µü´úÆ÷±éÀúHashMap
+	 * è¿­ä»£å™¨éå†HashMap
 	 */
 	@SuppressWarnings("unchecked")
 	private static void Fun03() {
 		HashMap<String, String> map = new HashMap<String, String>();
-		map.put("1", "ÓïÎÄ");
-		map.put("2", "ÊıÑ§");
-		Set<Entry<String, String>> ss = map.entrySet();	// map.entrySet()·½·¨»ñÈ¡ÁËmapÖĞ¸÷¸ö¼üÖµ¶ÔµÄ¼¯ºÏ
+		map.put("1", "è¯­æ–‡");
+		map.put("2", "æ•°å­¦");
+		Set<Entry<String, String>> ss = map.entrySet();	// map.entrySet()æ–¹æ³•è·å–äº†mapä¸­å„ä¸ªé”®å€¼å¯¹çš„é›†åˆ
 		System.out.println(ss);
 		Iterator<Entry<String, String>> iterator = ss.iterator();
 		while(iterator.hasNext()) {
 			Map.Entry<String, String> item = (Map.Entry<String, String>)iterator.next();
-			System.out.println("key£º" + item.getKey() + "£¬value£º" + item.getValue());
+			System.out.println("keyï¼š" + item.getKey() + "ï¼Œvalueï¼š" + item.getValue());
 		}
 	}
 	
 	/**
-	 * µü´úÆ÷±éÀúSet
+	 * è¿­ä»£å™¨éå†Set
 	 */
 	private static void Fun02() {
 		Set<String> set = new HashSet<String>();
@@ -108,7 +108,7 @@ public class MyIterator {
 	}
 	
 	/**
-	 * µü´úÆ÷±éÀúList
+	 * è¿­ä»£å™¨éå†List
 	 */
 	private static void Fun01() {
 		ArrayList<String> list = new ArrayList<String>();
@@ -121,7 +121,7 @@ public class MyIterator {
 		for(Iterator<String> iter = list.iterator();iter.hasNext();) {
 			 String item = iter.next();
 			 if(item.contains("3") == false) {
-				 // ÍùĞÂµÄÊı×éÖĞÌí¼Ó²»°üº¬¹Ø¼ü×Ö3µÄÔªËØ
+				 // å¾€æ–°çš„æ•°ç»„ä¸­æ·»åŠ ä¸åŒ…å«å…³é”®å­—3çš„å…ƒç´ 
 				 list_new.add(item);
 			 }
 		}
